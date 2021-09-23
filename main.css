@@ -1,0 +1,55 @@
+#body {
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  border: solid black;
+  display: grid;
+  grid-template-columns: 0.1fr 6fr 0.1fr;
+  grid-template-rows: 0.1fr 3fr 5fr 5fr 3fr 0.1fr;
+  grid-gap: 20px;
+  grid-template-areas:
+    " . . . "
+    " . nav . "
+    " . header . "
+    " . main . "
+    " . footer . "
+    " . . . ";
+}
+
+nav {
+  grid-area: nav;
+  border: solid black;
+}
+
+header {
+  grid-area: header;
+  border: solid black;
+}
+
+main {
+  grid-area: main;
+  border: solid black;
+}
+
+footer {
+  grid-area: footer;
+  border: solid black;
+}
+
+p {
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    min-height: 800px;
+    grid-template-columns: 0.1fr 3fr 5fr 5fr 3fr 0.1fr;
+    grid-template-rows: 0.1fr 6fr 0.1fr;
+    grid-template-areas:
+      " . . . . . ."
+      " . nav header main footer . "
+      " . . . . . .";
+  }
+}
