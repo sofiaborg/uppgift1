@@ -3,6 +3,17 @@
   justify-content: center;
 }
 
+.headlines {
+  text-transform: uppercase;
+  font-family: arial;
+  text-align: center;
+  padding-top: 20px;
+}
+
+li {
+  padding: 5px;
+}
+
 .container {
   border: solid black;
   display: grid;
